@@ -1,0 +1,346 @@
+% general formatting
+\documentclass[11pt]{report}
+%\usepackage[enable]{darkmode} % option to enable dark mode
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[letterpaper, top = 1in, bottom = 1in, left = 1.25in, right = 1.25in]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{15pt}
+\setlength{\footskip}{25pt}
+\rhead{Cuatrecasas}
+\cfoot{\thepage}
+\usepackage{setspace}
+\doublespacing
+\setlength{\footnotesep}{15pt}
+\setlength{\skip\footins}{15pt}
+\usepackage{indentfirst}
+\setlength{\parindent}{25pt}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\LARGE\bf}{\chapter}{0pt}{\centering}
+\titlespacing{\chapter}{0pt}{-40pt}{5pt}
+
+% epigraph formatting
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{370pt}
+\setlength{\epigraphrule}{0pt}
+
+% toc layout
+\usepackage{tocloft}
+\usepackage{hyperref}
+\renewcommand{\contentsname}{\hfill \huge Contents \hfill}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+% abstract formatting
+\renewcommand{\abstractname}{\vspace{-140pt}{\LARGE Abstract}}
+
+% bibliography formatting
+\usepackage{hanging}
+
+% graphics
+\usepackage{graphicx}
+\graphicspath{{./figures/}}
+\usepackage{caption}
+
+% make first-appearing footnote unnumbered
+\newcommand{\blankfootnote}[1]{
+	\begingroup
+		\renewcommand{\thefootnote}{}\footnote{#1}
+		\addtocounter{footnote}{-1}
+	\endgroup
+}
+
+\title{THE ETERNAL CITY OF THE MIND \\ JUAN JOSÉ SAER AS A CASE STUDY IN MODERN ARCHITECTURE}
+
+\author{Lucas Daniel Cuatrecasas}
+
+\date{March 2018}
+
+\begin{document}
+
+% title page
+
+\begin{titlepage}
+
+\begin{center}
+
+\makeatletter
+
+\vspace*{25pt}
+
+\LARGE{\@title}
+
+\vspace{12pt}
+
+\normalsize by
+
+\vspace{12pt}
+
+\Large{\@author}
+
+\vspace{40pt}
+
+\normalsize An Honors Thesis \\ \vspace{40pt} Presented in Partial Fulfillment \\ of the Requirements for the Degree of Bachelor of Arts \\ Department of Romance Languages and Literatures \\ \vspace{40pt} Harvard College \\ Cambridge, Massachusetts
+
+%\vspace{145pt}
+
+\vspace{40pt}
+
+\includegraphics[scale=0.40]{figure_0}
+
+\vspace{35pt}
+
+\@date
+
+\makeatother
+
+\end{center}
+
+\end{titlepage}
+
+\pagenumbering{roman} 
+
+\begin{abstract}
+
+\noindent Much of the striking originality of the Argentine writer Juan José Saer (1937-2005) stems from the setting for his centuries-long arc of fictional narratives: the city of Santa Fe and its surroundings. Given Saer's spatial consistency, this thesis reads his fiction through the lens of modern architecture and urban planning theory with the aim of revealing in Saer a minutely-structured formal system in which mind and matter's retentive capacities converge. This argument unfolds in three chapters, the latter two of which each build upon the preceding chapter. In \hyperref[ch:1]{Chapter One}, I claim that, in \textit{Cicatrices}, \textit{Lugar}, and \textit{La grande}, Saer's narrative techniques, culled from genre fiction, and the polyvalence of the grid in his work point to a desire for Freudian mastery that underlies the use of grids in city planning. \hyperref[ch:2]{Chapter Two} argues that Saer's novel \textit{Glosa} distills the way in which his fictional city anticipates and shapes the actions of its inhabitants, consistent with Corbusian modernist urbanism's formulation of ``the functional city.'' \hyperref[ch:3]{Chapter Three}, drawing from Freud's likening of the mind to a city, identifies instances across Saer's fiction in which mind and matter's analogous storage capacity underpins a cross-temporal preservation at work in his Santa Fe. Extrapolated to physical cities, these mechanisms suggest that urban layouts become deterministic insofar as they retain traces of previous use; within the context of Saer's work, they suggest that we can conceptualize his fiction as an atemporal, simultaneous city, predicated on the forms of a physical referent.
+
+\end{abstract}
+
+\chapter*{Acknowledgements}
+
+\begin{singlespacing}
+
+\noindent Writing this thesis has been an exciting intellectual and emotional endeavor---one that could not have been possible without the presence and support of many. It is with immense gratitude that I present this work to
+
+\begin{quotation}
+
+\noindent My mother, Oliver, Josiah Blackmore, Luigi Patruno, Mariano Siskind and the students of his seminars, Roanne Kantor, Kathy Richman, Daniel Aguirre Oteiza, Cathy Downey, Eli Nelson, Julie Estrada, Caleb Shelburne, Ahmed Ragab and all of the participants in the 2017-2018 Science, Religion and Culture Program at Harvard Divinity School, Jeffrey Schnapp and the students of Italian 245, spring of 2017, Odile Harter, Robert E. Dressler, Leona E. Dressler, the administrators of the Robert Bacon Fund, the participants in and organizers of the 2017 Coloquio Internacional Juan José Saer, Princeton University Special Collections, Françoise Dubosquet, the library staff at The University of Rennes 2, and Special Collections at Harvard University's Graduate School of Design.
+
+\end{quotation}
+Thank you for your time, wisdom, receptivity, and unfailing kindness.
+
+\end{singlespacing}
+
+\newpage
+
+\thispagestyle{plain}
+
+\epigraph{\vspace{450pt} \singlespacing \raggedleft \textit{An approach which considers works of art as living, autonomous models of consciousness will seem objectionable only so long as we refuse to surrender the shallow distinction of form and content. For the sense in which a work of art has no content is no different from the sense in which the world has no content. Both are. Both need no justification; nor could they possibly have any.}}{\vspace{15pt} Susan Sontag}
+
+\tableofcontents
+
+\newpage
+
+\pagenumbering{arabic}
+
+\chapter*{A Note on Translations}
+\addcontentsline{toc}{chapter}{A Note on Translations}
+
+I have used English for the entirety of this thesis in the interest of ensuring total accessibility to those outside the field of Latin American and Spanish-language literatures. Unless otherwise cited in the bibliography, all translations of direct quotations from non-Anglophone sources are mine. Generally, my translations strive to be literal-minded representations of the Spanish. Phrases or words whose nuances may require explanation or escape the English translation are usually bracketed within the quotations.
+
+Wherever I have been aware of a published translation of Saer into English, I have used it instead of my own translation. Two factors motivate this choice. First, the published translations of Saer that I have encountered almost always supply a word-for-word English rendering of Saer's words (allowing for altered syntax, punctuation, etc.). For the purposes of my analysis, which focuses greatly on the precise referents of descriptions, this literalness outweighs any missed opportunities for lyricism. Indeed, my own translations of Saer aim to hew as closely to the original as possible, avoiding potentially more poetic interpretations that would not be verbatim. Second, in view of the several translations of Saer into English that have appeared within the last decade, we are more and more able to appreciate a distinct experience of reading Saer in English. Readers familiar with the English corpus have encountered a new territory that overlaps with the Spanish but also stretches beyond it, into unforeseen resonances and connotations. In using translations that are available beyond my thesis, my hope has been to welcome the generative potential that they offer.
+
+Unlike translations of other writers, translations of Saer are cited by the names of the translators in the text and listed under their names in the bibliography. Here too, the intent is to make transparent the diverse contributions of individual translators to shaping the tone, feel, and lexicon of Saer's works in English. Nevertheless, the titles of and names in Saer's work remain in Spanish in the text (e.g., \textit{Cicatrices}, not \textit{Scars}, and ``el Matemático,'' not ``the Mathematician''), since the books and characters I am ultimately referring to are always those of the original Spanish-language corpus. My use of translations is meant to illuminate but never to replace.
+
+\chapter*{Introduction} \label{ch:introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+\input{chapters/introduction}
+
+\chapter*{Chapter One \\ The Narrative Grid: Exploring Planning's Fantasies of Mastery in Saer's Santa Fe} \label{ch:1}
+\addcontentsline{toc}{chapter}{Chapter One \\ The Narrative Grid: Exploring Planning's Fantasies of Mastery in Saer's Santa Fe}
+\input{chapters/chapter_1}
+
+\chapter*{Chapter Two \\ Saer as a Narrative Functionalist}  \label{ch:2}
+\addcontentsline{toc}{chapter}{Chapter Two \\ Saer as a Narrative Functionalist}
+\input{chapters/chapter_2}
+
+\chapter*{Chapter Three \\ The Eternal City of the Mind: Saer's Santa Fe as an Urban Storage Device}  \label{ch:3}
+\addcontentsline{toc}{chapter}{Chapter Three \\ The Eternal City of the Mind: Saer's Santa Fe as an Urban Storage Device}
+\input{chapters/chapter_3}
+
+\chapter*{Conclusion \\ Beyond Santa Fe}  \label{ch:conclusion}
+\addcontentsline{toc}{chapter}{Conclusion: Beyond Santa Fe}
+\input{chapters/conclusion}
+
+\newpage
+
+\chapter*{Works Cited}
+\addcontentsline{toc}{chapter}{Works Cited}
+
+\begin{hangparas}{.25in}{1}
+
+Ando, Tadao. \textit{Seven Interviews with Tadao Ando}. Edited by Micheal Auping, Modern Art Museum of Fort Worth, 2003.
+
+-{}-{}-. ``Interview with Tadao Ando.'' \textit{ANY: Architecture New York}, interview by Hiroshi Maruyama, no. 6, May/June 1994, pp. 10-19.
+
+-{}-{}-. \textit{The Yale Studio and Current Works}. Rizzoli, 1989.
+
+Bachelard, Gaston. \textit{The Poetics of Space}. Translated by Maria Jolas, Beacon Press, 1969.
+
+Baudelaire, Charles. \textit{Paris Spleen, 1869}. Translated by Louise Varèse, New Directions, 1970.
+
+Benjamin, Walter. \textit{The Origin of German Tragic Drama}. Translated by John Osborne, Verso, 1990.
+
+Bermúdez Martínez, María. \textit{La incertidumbre de lo real: bases de la narrativa de Juan José Saer}. Universidad de Oviedo, Departamento de Filología Española, 2001.
+
+Brooks, Peter. \textit{Reading for the Plot: Design and Intention in Narrative}. Clarendon, Oxford UP, 1984.
+
+Chejfec, Sergio. ``Hotel Saer.'' Coloquio Internacional Juan José Saer, 10 to 12 May 2017, Santa Fe, Argentina. Unpublished conference paper, PDF document.
+
+Costa, Margaret Jull, translator. \textit{The Witness}. By Juan José Saer, Serpent's Tail, 2009.
+
+Derrida, Jacques. ``The Law of Genre.'' Translated by Avital Ronell, \textit{Critical Inquiry}, vol. 7, no. 1, Autumn 1980, pp. 55-81.
+
+Descartes, René. \textit{Selected Philosophical Writings}. Translated by John Cottingham et al., Cambridge UP, 1988.
+
+Díaz Quiñones, Arcadio. ``Las palabras de la tribu: \textit{El entenado} de Juan José Saer.'' \textit{Glosa - El entenado}, edited by Julio Premat, Alción Editora, 2010, pp. 900-910.
+
+Dobry, Edgardo. ``Prueba de soledad en el paisaje.'' \textit{Clarín}, 26 September 2013, \url{https://www.clarin.com/literatura/juan-jose-saer-prueba-soledad-paisaje_0_SJBxYgVoDQe.html}.
+
+Dolph, Steve, translator. \textit{La Grande}. By Juan José Saer, Open Letter, 2014.
+
+-{}-{}-, translator. \textit{Scars}. By Juan José Saer, Open Letter, 2011.
+
+-{}-{}-, translator. \textit{The Sixty-Five Years of Washington}. By Juan José Saer, Open Letter, 2010.
+
+Dubois, Pierre. \textit{Le Roman Policier ou la Modernité}. Nathan, 1992.
+
+Dunnett, James. ``Le Corbusier and the city without streets.'' \textit{The Modern City Revisited}, edited by Thomas Deckker, Spon, 2000, pp. 56-79.
+
+Freud, Sigmund. \textit{Beyond the Pleasure Principle}. Translated by James Strachey, Norton, 1961.
+
+-{}-{}-. \textit{Civilization and Its Discontents}. Translated by James Strachey, Norton, 1961.
+
+García-Moreno, Laura. ``Entre la pampa del lenguaje y el alambrado de la escritura: la mancha roja como síntoma de la ambigüedad de lo real en \textit{La ocasión} de Juan José Saer.'' \textit{Journal of Iberian and Latin American Studies}, vol. 23, no. 2, 2017, pp. 195-215.
+
+Giedion, Sigfried. ``Introduction.'' \textit{Can Our Cities Survive?}, by Josep Lluís Sert, Harvard UP, 1942, pp. ix-xi.
+
+Gramuglio, María Teresa. ``El lugar de Saer.'' \textit{Glosa - El entenado}, edited by Julio Premat, Alción Editora, 2010, pp. 840-861.
+
+Grayling, A. C. \textit{Russell: A Very Short Introduction}. Oxford UP, 2002.
+
+Hall, Peter. \textit{Cities of Tomorrow: An Intellectual History of Urban Planning and Design in the Twentieth Century}. Basil Blackwell, 1989.
+
+Jacobs, Jane. \textit{The Death and Life of Great American Cities}. Modern Library, 2011.
+
+Kahn, Louis. ``Monumentality.'' \textit{Louis Kahn: Essential Texts}, edited by Robert Twombly, Norton, 2003.
+
+Kantor, Roanne, translator. \textit{The One Before}. By Juan José Saer, Open Letter, 2015.
+
+Katz, Peter. \textit{The New Urbanism: Toward an Architecture of Community}. McGraw-Hill, 1994.
+
+Kohan, Martín. ``Glosa, novela política.'' \textit{Zona de prólogos}, edited by Paulo Ricci, Seix Barral, 2011, pp. 147-60.
+
+Koolhaas, Rem. \textit{Delirious New York}. Monacelli, 1994.
+
+Krauss, Rosalind E. ``Grids.'' \textit{The Originality of the Avant-Garde and Other Modernist Myths}, MIT P, 1987, pp. 8-22.
+
+Lane, Helen, translator. \textit{Nobody Nothing Never}. By Juan José Saer, Serpent's Tail, 1993.
+
+-{}-{}-, translator. \textit{The Event}. By Juan José Saer, Serpent's Tail, 1995.
+
+-{}-{}-, translator. \textit{The Investigation}. By Juan José Saer, Serpent's Tail, 1999.
+
+Larson, Kent. \textit{Louis I. Kahn: Unbuilt Masterworks}. Monacelli, 2000.
+
+Le Corbusier. \textit{The City of Tomorrow}. Translated by Frederick Etchells, MIT P, 1971.
+
+-{}-{}-. \textit{The Radiant City}. Translated by Pamela Knight et al., Orion P, 1964.
+
+-{}-{}-. \textit{Towards a New Architecture}. Translated by Frederick Etchells, Holt, Rinehart and Winston, 1960.
+
+-{}-{}-. \textit{When the Cathedrals Were White}. Translated by Francis E. Hyslop, Jr., McGraw-Hill, 1964.
+
+Levine, Caroline. \textit{Forms: Whole, Rhythm, Hierarchy, Network}. Princeton UP, 2015.
+
+Linenberg-Fressard, Raquel. \textit{Exil et langage dans le roman argentin contemporain: Copi, Puig, Saer}. 1988, Université de Haute-Bretagne, Rennes II. Archived dissertation.
+
+Link, Daniel. ``El juego silencioso de los cautos.'' Prologue. \textit{El juego de los cautos}, edited by Daniel Link, La Marca Editora, 1992.
+
+Mumford, Eric. \textit{The CIAM Discourse on Urbanism, 1928-1960}. MIT P, 2000.
+
+Niemeyer, Oscar. \textit{Minha experiência em Brasilia}. Vitória, 1961.
+
+Patruno, Luigi. \textit{Relatos de regreso}. Beatriz Viterbo Editora, 2015.
+
+Pauls, Alan. ``La ocasión: Mujer, gaucho malo, caballos.'' \textit{Zona de prólogos}, edited by Paulo Ricci, Seix Barral, 2011, pp. 161-171.
+
+Poe, Edgar Allan. ``The Philosophy of Composition.'' \textit{The Selected Writings of Edgar Allan Poe: Authoritative Texts, Backgrounds and Contexts, Criticism}, edited by G. R. Thompson, W. W. Norton and Company, 2004, pp. 675-684.
+
+Premat, Julio. ``Estando empezando.'' \textit{Zona de prólogos}, edited by Paulo Ricci, Seix Barral, 2011, pp. 19-35.
+
+-{}-{}-. \textit{La dicha de Saturno}. Beatriz Viterbo, 2002.
+
+-{}-{}-. ``Saer fin de siglo y el concepto de lugar.'' \textit{Foro Hispánico}, vol. 24, no. 1, Nov. 2003, pp. 43-52.
+
+Prieto, Martín. \textit{Breve historia de la literatura argentina}. Taurus, 2006.
+
+Pyrhönen, Heta. \textit{Murder from an Academic Angle: An Introduction to the Study of the Detective Narrative}. Camden, 1994.
+
+Rifkind, David. ```Everything in the state, nothing against the state, nothing outside the state': corporativist urbanism and Rationalist architecture in fascist Italy.'' \textit{Planning Perspectives}, vol. 27, no. 1, Jan. 2012, pp. 51-80.
+
+Romero, José Luis. \textit{Latinoamérica: las ciudades y las ideas}. Siglo Veintiuno Editores, 1976.
+
+Rovira, Josep M. \textit{José Luis Sert 1901-1983}. Electa, 2003.
+
+Russell, Bertrand. \textit{The Analysis of Mind}. New York, Macmillan, 1921. Print.
+
+Saer, Juan José. \textit{Cicatrices}. Seix Barral, 2007.
+
+-{}-{}-. \textit{Cuentos Completos}. Seix Barral, 2014.
+
+-{}-{}-. \textit{El entenado}. Seix Barral, 2015.
+
+-{}-{}-. \textit{El limonero real}. Editorial planeta, 1974.
+
+-{}-{}-. ``Entrevista a Juan José Saer del 4 de marzo de 2005.'' \textit{Glosa - El entenado}, edited by Julio Premat, interview by Julio Premat et al., Alción Editora, 2010, pp. 923-32.
+
+-{}-{}-. \textit{Glosa}. 1982, Juan José Saer Manuscripts, Manuscripts Division, Department of Rare Books and Special Collections, Princeton University Library, box 1, folder 3. Draft notebook.
+
+-{}-{}-. \textit{Glosa}. Seix Barral, 2015.
+
+-{}-{}-. \textit{La grande}. Seix Barral, 2009.
+
+-{}-{}-. \textit{La ocasión}. Ediciones Destino, 1988.
+
+-{}-{}-. \textit{La pesquisa}. Seix Barral, 1994.
+
+-{}-{}-. \textit{Una forma más real que la del mundo}. Edited by Martín Prieto, Mansalva, 2016.
+
+-{}-{}-. ``Yo escribí `Taxi Driver'.'' \textit{Página 12}, interview by Marcelo Damiani, 13 Dec. 1998, \url{https://www.pagina12.com.ar/1998/suple/libros/98-12/98-12-13/index.htm}.
+
+Sarlo, Beatriz. ``La condición mortal.'' \textit{Glosa - El entenado}, edited by Julio Premat, Alción Editora, 2010, pp. 895-900.
+
+-{}-{}-. \textit{Zona Saer}. Ediciones Universidad Diego Portales, 2016.
+
+Sayers, Dorothy L. ``Aristotle on Detective Fiction.'' \textit{The Philosophy of Sherlock Holmes}, edited by Philip Tallon, David Baggett, The University Press of Kentucky, 2012, 167-80. 
+
+Schilpp, Paul Arthur, editor. \textit{The Philosophy of Bertrand Russell}. New York, Tudor Publishing Company, 1951.
+
+Scully, Vincent. ``Louis I. Kahn and the Ruins of Rome.'' \textit{Engineering and Science}, vol. 56, no. 2, 1993, pp. 2-13.
+
+Sert, Josep Lluís. \textit{Can Our Cities Survive?} Harvard UP, 1942.
+
+Steele, Timothy. ``The Structure of the Detective Story: Classical or Modern?'' \textit{Modern Fiction Studies}, vol. 27, no. 4, 1981, pp. 555-70.
+
+Stevenson, Robert Louis. \textit{The Wrecker}. New York, Charles Scribner's Sons, 1900.
+
+Tafuri, Manfredo. \textit{The Sphere and the Labyrinth: Avant-Gardes and Architecture from Piranesi to the 1970s}. MIT P, 1987.
+
+-{}-{}-. ``Toward a Critique of Architectural Ideology.'' \textit{Architecture Theory since 1968}, edited by K. Michael Hays, MIT P, 1998, pp. 6-35.
+
+Takeyama, Kiyoshi. ``Tadao Andô: Heir to a Tradition.'' \textit{Perspecta}, vol. 20, Jan. 1983, pp. 163-80.
+
+Todorov, Tzvetan. ``Tipología del relato policial.'' \textit{El juego de los cautos}, edited by Daniel Link, La Marca Editora, 1992, pp. 46-51.
+
+Twombly, Robert. ``Introduction: Kahn's Search.'' \textit{Louis Kahn: Essential Texts}, edited by Robert Twombly, Norton, 2003.
+
+Veal, Alex. ``Time in Japanese architecture: tradition and Tadao Ando.'' \textit{Architectural Research Quarterly}, vol.6, no. 4, 2002, pp. 349-62.
+
+Walker, Carlos. \textit{El Horror Como Forma: Juan José Saer -- Roberto Bolaño}. 2013, University of Buenos Aires. Dissertation.
+
+\end{hangparas}
+
+\end{document}
